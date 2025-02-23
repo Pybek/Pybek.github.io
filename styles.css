@@ -1,31 +1,48 @@
-/* Modern Islamic Theme Colors */
+/* Main Colors */
 :root {
-    --primary-color: #2C3E50;
-    --accent-color: #27AE60;
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
     --text-color: #333;
-    --light-bg: #f4f4f4;
+    --background-color: #f9f9f9;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Hind Siliguri', Arial, sans-serif;
     line-height: 1.6;
+    background: var(--background-color);
     color: var(--text-color);
 }
 
+/* Header Styles */
 header {
-    background: var(--primary-color);
-    color: white;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 1rem;
 }
 
 nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.tagline {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
 }
 
 nav ul {
@@ -37,44 +54,66 @@ nav ul li {
     margin-left: 2rem;
 }
 
-nav a {
-    color: white;
+nav ul li a {
+    color: var(--text-color);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-section {
-    margin-bottom: 3rem;
+.hero-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.post {
+    margin-top: 1rem;
+}
+
+.post h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Footer */
 footer {
-    background: var(--primary-color);
-    color: white;
+    background: white;
+    padding: 2rem;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    nav ul {
-        margin-top: 1rem;
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 0.5rem 0;
-    }
+.social-links a {
+    color: var(--text-color);
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
 }
