@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azim's Website</title>
+    <title>আজিমের ব্লগ | Azim's Blog</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <h1>Azim's Space</h1>
+            <div class="logo">
+                <h1>আজিমের ব্লগ</h1>
+                <p class="tagline">আসসালামু আলাইকুম! স্বাগতম আমার ব্লগে ❤️</p>
+            </div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#blog">ব্লগ</a></li>
+                <li><a href="#about">আমার সম্পর্কে</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section id="home">
-            <h2>Assalamu Alaikum!</h2>
-            <p>Welcome to my personal website.</p>
+        <section id="featured-post" class="hero-section">
+            <h2>সর্বশেষ পোস্ট</h2>
+            <div class="post">
+                <h3>আমার প্রথম ব্লগ পোস্ট</h3>
+                <p class="date">২৩ ফেব্রুয়ারি, ২০২৫</p>
+                <p>এখানে আপনার প্রথম ব্লগ পোস্টের সারসংক্ষেপ লিখুন...</p>
+                <a href="#" class="read-more">আরো পড়ুন →</a>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Azim's Website. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; ২০২৫ আজিমের ব্লগ</p>
     </footer>
 </body>
 </html>
