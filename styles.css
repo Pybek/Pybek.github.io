@@ -1,12 +1,13 @@
-/* Main Colors */
+/* মজার রং-এর প্যালেট (Fun Color Palette) */
 :root {
-    --primary-color: #2ecc71;
-    --secondary-color: #27ae60;
-    --text-color: #333;
-    --background-color: #f9f9f9;
+    --primary: #FF6B6B;
+    --secondary: #4ECDC4;
+    --accent: #FFE66D;
+    --background: #f7f7f7;
+    --text: #2C3E50;
 }
 
-/* Basic Reset */
+/* বেসিক স্টাইল (Basic Styles) */
 * {
     margin: 0;
     padding: 0;
@@ -14,92 +15,139 @@
 }
 
 body {
-    font-family: 'Hind Siliguri', Arial, sans-serif;
-    line-height: 1.6;
-    background: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Noto Sans Bengali', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
 }
 
-/* Header Styles */
-header {
+/* লোডিং অ্যানিমেশন (Loading Animation) */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.rocket {
+    font-size: 50px;
+    animation: fly 1s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ন্যাভবার স্টাইল (Navbar Styles) */
+.navbar {
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1rem;
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo h1 {
-    color: var(--primary-color);
-    font-size: 2rem;
-}
-
-.tagline {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-}
-
-nav ul {
+.brand {
     display: flex;
-    list-style: none;
+    align-items: center;
+    gap: 10px;
 }
 
-nav ul li {
-    margin-left: 2rem;
+.brand h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
 }
 
-nav ul li a {
-    color: var(--text-color);
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
     text-decoration: none;
-    transition: color 0.3s;
+    color: var(--text);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: var(--primary-color);
+.menu-item:hover {
+    background: var(--secondary);
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* Main Content */
-main {
+/* হিরো সেকশন (Hero Section) */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ব্লগ পোস্ট কার্ড (Blog Post Cards) */
+.blog-posts {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.hero-section {
+.post-card {
     background: white;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-.post {
+.post-card:hover {
+    transform: translateY(-10px);
+}
+
+.post-emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* মজার বাটন (Cool Button) */
+.cool-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
     margin-top: 1rem;
+    transition: all 0.3s ease;
 }
 
-.post h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+.cool-button:hover {
+    background: var(--secondary);
+    transform: scale(1.05);
 }
 
-.date {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-/* Footer */
+/* ফুটার স্টাইল (Footer Styles) */
 footer {
     background: white;
     padding: 2rem;
@@ -107,13 +155,17 @@ footer {
     margin-top: 2rem;
 }
 
-.social-links a {
-    color: var(--text-color);
-    margin: 0 1rem;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+.social-links {
+    margin-bottom: 1rem;
 }
 
-.social-links a:hover {
-    color: var(--primary-color);
+.social-button {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-button:hover {
+    color: var(--primary);
 }
