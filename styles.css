@@ -18,6 +18,7 @@ body {
     font-family: 'Noto Sans Bengali', sans-serif;
     background-color: var(--background);
     color: var(--text);
+    text-align: center;
 }
 
 /* লোডিং অ্যানিমেশন (Loading Animation) */
@@ -92,7 +93,7 @@ body {
 }
 
 .welcome-text {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
 }
@@ -100,6 +101,10 @@ body {
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
 }
 
 /* ব্লগ পোস্ট কার্ড (Blog Post Cards) */
@@ -128,6 +133,15 @@ body {
 .post-emoji {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.post-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.post-card p {
+    font-size: 1.2rem;
 }
 
 /* মজার বাটন (Cool Button) */
