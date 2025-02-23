@@ -1,52 +1,80 @@
+/* Modern Islamic Theme Colors */
+:root {
+    --primary-color: #2C3E50;
+    --accent-color: #27AE60;
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 header {
-    background: #333;
+    background: var(--primary-color);
     color: white;
-    padding: 1em 0;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav ul {
+    display: flex;
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-left: 2rem;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
 }
 
-.hero {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    padding: 50px;
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+footer {
+    background: var(--primary-color);
     color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-button {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #555;
-}
-
-.dynamic-content {
-    margin: 20px;
-    padding: 20px;
-    background: white;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
 }
